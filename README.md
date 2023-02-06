@@ -9,10 +9,19 @@ __Requirements :__
 3. EBS volume for Database Pod
 4. Label Node with zone names 
 5. Kubernetes definition files to create objects on kubernetes cluster. 
-    * Deployment
-    * Service
-    * Secret
-    * Volume
+    * Deployment  
+    * Service  
+    * Secret  
+    * Volume    
+
+
+__Steps :__  
+
+1. Configure Hosted zone on AWS Route53 for k8s cluster domain  
+2. Create Kubernetes Cluster on AWS EC2 with kops, kubectl   
+3. Containerize the application, build images and push it to dockerhub registry. 
+4. Create Kubernetes manifest files to create deployment and service components for application application, database, memcache and rabbitmq containers. 
+5. Create EC2 volume and mount it to database deployment, deployed all the components and setup AWS Route53 subdomain to access the web application.
 
 ```   
    ┌─────────────┐   
