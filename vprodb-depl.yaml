@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: vprodb
-  relicase: 1
+  replicas: 1
   template:
     metadata:
       labels:
